@@ -26,12 +26,16 @@ interface TripFormProps {
   initialData: TripFormData;
   onSubmit: (formData: TripFormData) => void;
   isGenerating: boolean;
+  errorMessage?: string | null;
+  onClearError?: () => void;
 }
 
 export const TripForm: React.FC<TripFormProps> = ({
   initialData,
   onSubmit,
   isGenerating,
+  errorMessage,
+  onClearError,
 }) => {
   const [formData, setFormData] = useState<TripFormData>(initialData);
   const [generationStep, setGenerationStep] = useState<string>('');
@@ -359,11 +363,34 @@ export const TripForm: React.FC<TripFormProps> = ({
               />
             </div>
 
-            {/* Information Banner for Sample Mode */}
-            <div className="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200 flex items-start gap-3 text-xs text-amber-900">
-              <AlertCircle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
+            {/* Error Message Box */}
+            {errorMessage && (
+              <div className="p-4 rounded-2xl bg-rose-50 border border-rose-300 text-rose-900 text-sm flex items-start justify-between gap-3 shadow-sm animate-in slide-in-from-top-2">
+                <div className="flex items-start gap-3">
+                  <AlertCircle className="w-5 h-5 text-rose-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-bold">Trip Generation Notice</span>
+                    <p className="text-xs text-rose-700 mt-1 leading-relaxed">{errorMessage}</p>
+                  </div>
+                </div>
+                {onClearError && (
+                  <button
+                    type="button"
+                    onClick={onClearError}
+                    className="text-rose-500 hover:text-rose-700 font-bold text-xs p-1"
+                    title="Dismiss"
+                  >
+                    ✕
+                  </button>
+                )}
+              </div>
+            )}
+
+            {/* Information Banner for OpenAI Integration */}
+            <div className="p-3.5 rounded-xl bg-sky-50/80 border border-sky-200 flex items-start gap-3 text-xs text-sky-950">
+              <Sparkles className="w-4 h-4 text-sky-600 flex-shrink-0 mt-0.5" />
               <div>
-                <span className="font-semibold">Sample Data Preview Active:</span> Selecting &quot;Kyoto &amp; Tokyo&quot; or &quot;Bali&quot; loads pre-configured, rich itineraries. Other destinations will generate a tailored schedule based on your selected duration, budget, and vibes!
+                <span className="font-semibold">OpenAI Powered:</span> Custom itineraries are synthesized using real-time GPT models based on your destination, budget, companion, and preferences. Pre-configured sample trips (Kyoto, Bali) remain accessible anytime.
               </div>
             </div>
 

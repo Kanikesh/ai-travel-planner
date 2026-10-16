@@ -15,13 +15,13 @@ export const TechStackRoadmap: React.FC = () => {
       status: 'complete'
     },
     {
-      phase: 'Step 2 (Next)',
+      phase: 'Step 2 (Active Now)',
       title: 'OpenAI API Integration',
       icon: Sparkles,
       color: 'amber',
-      badge: 'Ready for Prompting',
-      description: 'Connect GPT-4o / GPT-3.5 via a Next.js API Route (/api/generate-trip) with JSON structured outputs for day-by-day plans, hidden gems, and costs.',
-      status: 'upcoming'
+      badge: 'Integrated & Active',
+      description: 'Connected GPT models via Next.js server route (/api/generate-trip) with strict JSON output matching our TypeScript Itinerary interface.',
+      status: 'complete'
     },
     {
       phase: 'Step 3 (Next)',

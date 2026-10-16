@@ -77,11 +77,18 @@ export const ItineraryView: React.FC<ItineraryViewProps> = ({
           </button>
 
           <div className="flex items-center gap-3">
-            {/* Sample data indicator badge */}
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-800 border border-amber-300">
-              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-              <span>Sample Itinerary Loaded</span>
-            </span>
+            {/* Sample vs Real AI data indicator badge */}
+            {itinerary.isSampleData ? (
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-100 text-amber-800 border border-amber-300">
+                <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+                <span>Sample Itinerary Loaded</span>
+              </span>
+            ) : (
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 border border-emerald-300 shadow-sm">
+                <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+                <span>Real AI Itinerary (OpenAI)</span>
+              </span>
+            )}
 
             {/* Save Trip Button (Mock MongoDB Integration) */}
             <button
