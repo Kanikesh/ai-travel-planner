@@ -46,12 +46,13 @@ export const TripForm: React.FC<TripFormProps> = ({
   }, [initialData]);
 
   const quickDestinations = [
+    'Jaipur & Udaipur, India',
+    'Goa, India',
+    'Kerala, India',
     'Kyoto & Tokyo, Japan',
     'Bali, Indonesia',
     'Paris, France',
-    'Rome, Italy',
     'Swiss Alps, Switzerland',
-    'New York City, USA',
   ];
 
   const budgetOptions: Array<{

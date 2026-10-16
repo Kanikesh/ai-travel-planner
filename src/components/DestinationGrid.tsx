@@ -110,7 +110,7 @@ export const DestinationGrid: React.FC<DestinationGridProps> = ({
                     <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition" />
                   </button>
 
-                  {(dest.id === 'kyoto-japan' || dest.id === 'bali-indonesia') && (
+                  {(['kyoto-japan', 'bali-indonesia', 'rajasthan-india', 'kerala-india', 'goa-india', 'varanasi-india', 'agra-india', 'himachal-india', 'mumbai-india'].includes(dest.id)) && (
                     <button
                       onClick={() => onQuickLoadSample(dest.id)}
                       title="Load complete sample itinerary instantly"

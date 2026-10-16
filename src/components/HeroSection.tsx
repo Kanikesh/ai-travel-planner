@@ -48,11 +48,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           </button>
 
           <button
-            onClick={() => onLoadSample('kyoto-japan')}
-            className="w-full sm:w-auto px-6 py-4 rounded-xl bg-white border border-slate-300/80 text-slate-700 font-semibold text-base shadow-sm hover:bg-slate-50 hover:border-slate-400 hover:text-slate-900 transition-all flex items-center justify-center gap-2"
+            onClick={() => onLoadSample('rajasthan-india')}
+            className="w-full sm:w-auto px-6 py-4 rounded-xl bg-white border border-amber-300 text-slate-800 font-semibold text-base shadow-sm hover:bg-amber-50 hover:border-amber-400 hover:text-slate-900 transition-all flex items-center justify-center gap-2"
           >
             <Sparkles className="w-4 h-4 text-amber-500" />
-            <span>Test with Sample Data (Kyoto)</span>
+            <span>Preview Rajasthan, India</span>
           </button>
         </div>
 

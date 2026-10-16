@@ -17,7 +17,7 @@ export interface DayActivity {
   location: string;
   description: string;
   highlight: string;
-  tag: 'Sightseeing' | 'Food' | 'Culture' | 'Nature' | 'Adventure' | 'Relaxation' | 'Nightlife';
+  tag: 'Sightseeing' | 'Food' | 'Culture' | 'Nature' | 'Adventure' | 'Relaxation' | 'Nightlife' | 'Beaches' | 'Shopping' | 'Photography' | 'Culinary';
 }
 
 export interface DayPlan {

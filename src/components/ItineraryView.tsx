@@ -50,6 +50,8 @@ export const ItineraryView: React.FC<ItineraryViewProps> = ({
     switch (tag) {
       case 'Food':
         return 'bg-amber-100 text-amber-800 border-amber-200';
+      case 'Culinary':
+        return 'bg-orange-100 text-orange-800 border-orange-200';
       case 'Culture':
         return 'bg-indigo-100 text-indigo-800 border-indigo-200';
       case 'Nature':
@@ -58,6 +60,14 @@ export const ItineraryView: React.FC<ItineraryViewProps> = ({
         return 'bg-rose-100 text-rose-800 border-rose-200';
       case 'Relaxation':
         return 'bg-teal-100 text-teal-800 border-teal-200';
+      case 'Nightlife':
+        return 'bg-purple-100 text-purple-800 border-purple-200';
+      case 'Beaches':
+        return 'bg-cyan-100 text-cyan-800 border-cyan-200';
+      case 'Shopping':
+        return 'bg-pink-100 text-pink-800 border-pink-200';
+      case 'Photography':
+        return 'bg-violet-100 text-violet-800 border-violet-200';
       default:
         return 'bg-sky-100 text-sky-800 border-sky-200';
     }
